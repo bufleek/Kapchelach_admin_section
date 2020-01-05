@@ -1,0 +1,151 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    background:rgb(7, 1, 14);
+}
+::-webkit-scrollbar{
+    width:4px;
+}
+::-webkit-scrollbar-thumb{
+    background:#fff;
+}
+
+/*  !Users  */
+.register, .login{
+    min-height:90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.register form, .login form{
+    width:260px;
+    border:1px solid #fff;
+    padding: 30px;
+}
+.register form input, .register form select, .register form textarea, .login form input{
+    padding: 10px 2px;
+    margin:2px 0;
+    width:250px;
+}
+.register form select{
+    width: 258px;
+}
+.register form select option{
+    background:rgb(7, 1, 14);
+    color:#fff;
+}
+#submitRegistration, #loginSubmit{
+    background:rgb(1, 14, 30);
+    color:#fff;
+    width:258px;
+    margin-top:25px;
+}
+.formError{
+    color:red;
+}
+.formSuccess{
+    color:green;
+}
+#formMessage{
+    text-align: center;
+    width: 100%;
+}
+.fieldError{
+    background: rgba(233, 118, 153, 0.123);
+    color:#fff;
+}
+#formMessage{
+    color:#fff;
+}
+
+/*      Index       */
+#userDetails{
+    min-width:200px;
+    position: absolute;
+    right:4px;
+    top:58px;
+    background: rgba(52, 35, 61, 0.8);
+    color:rgba(255, 255, 255, 0.698);
+    display: none;
+}
+#userDetails h5{
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 5px;
+}
+#userDetails span{
+    border-bottom:2px solid red;
+    padding:2px 4px;
+    margin:3px 0 0 5px;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+}
+#logout{
+    margin: 15px auto;
+    padding:15px 0;
+    color: red;
+    cursor: pointer;
+    box-shadow: 5px 5px 20px red inset;
+    border-radius: 50%;
+    max-width: 50%;
+}
+#userDetails h, #userDetails p{
+    padding:5px 10px 0 10px;
+}
+#userDetails p{
+    text-align: center;
+}
+.dashboard{
+    height:100vh;
+    width:100%;
+    overflow-y: scroll;
+    display:grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows:58px 1fr;
+}
+.dashboard .navbar{
+    /*background:rgba(52, 35, 61, 0.5);*/
+    background:rgba(73, 0, 59,0.6);
+    box-shadow: 5px 5px 15px rgb(7, 1, 14);
+    grid-column: 1/3;
+    display:grid;
+    grid-template-columns: 1fr 120px;
+}
+.dashboard .navbar #user{
+    min-width:100px;
+    height: 100%;
+    grid-column: 2/3;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+    background:rgb(73, 0, 49);
+    text-transform: capitalize;
+}
+.dashboard .navbar #user img{
+    max-height:35px;
+    margin-top:5px;
+    border-radius: 50%;
+}
+.dashboard .navigation{
+    background: rgba(52, 35, 61, 0.5);
+    border-top:2px solid rgb(7, 1, 14);
+    border-bottom:2px solid rgb(7, 1, 14);
+    display: grid;
+    grid-auto-rows: 1fr;
+}
+.dashboard .navigation .navItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom:2px solid rgba(52, 35, 61, 0.4);
+    color:rgb(17, 149, 200);
+    font-weight: bold;
+    background: black;
+}
