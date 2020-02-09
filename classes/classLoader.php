@@ -6,7 +6,11 @@ spl_autoload_register(function($className){
     $fullPath = $path.$className.$extension;
 
     if (!file_exists($fullPath)) {
-        return false;
+        $path = "classes/";
+        $fullPath = $path.$className.$extension;
+        if(!file_exists($fullPath)){
+            return false;
+        }
     }
 
     include_once $fullPath;

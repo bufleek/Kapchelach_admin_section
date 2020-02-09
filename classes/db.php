@@ -1,7 +1,7 @@
 <?php
 
 abstract class db{
-    public function connect(){
+    protected function connect(){
         $server  = "localhost";
         $user = "root";
         $password = "";

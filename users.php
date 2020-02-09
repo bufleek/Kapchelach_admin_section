@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['email'])){
+        header("location: login.php");
+    }
+    include "includes/ajax.php";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

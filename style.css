@@ -4,6 +4,7 @@
 }
 body{
     background:rgb(7, 1, 14);
+    color:#fff;
 }
 ::-webkit-scrollbar{
     width:4px;
@@ -13,31 +14,31 @@ body{
 }
 
 /*  !Users  */
-.register, .login{
+.register, .login, .posts{
     min-height:90vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.register form, .login form{
+.register form, .login form, .posts form{
     width:260px;
     border:1px solid #fff;
     padding: 30px;
 }
-.register form input, .register form select, .register form textarea, .login form input{
+.register form input, .register form select, .register form textarea, .login form input, .posts form input, .posts form select, .posts form textarea{
     padding: 10px 2px;
     margin:2px 0;
     width:250px;
 }
-.register form select{
+.register form select, .posts form select{
     width: 258px;
 }
-.register form select option{
+.register form select option, .posts form select option{
     background:rgb(7, 1, 14);
     color:#fff;
 }
-#submitRegistration, #loginSubmit{
+#submitRegistration, #loginSubmit, #submitPost{
     background:rgb(1, 14, 30);
     color:#fff;
     width:258px;
@@ -61,91 +62,57 @@ body{
     color:#fff;
 }
 
-/*      Index       */
-#userDetails{
-    min-width:200px;
-    position: absolute;
-    right:4px;
-    top:58px;
-    background: rgba(52, 35, 61, 0.8);
-    color:rgba(255, 255, 255, 0.698);
-    display: none;
-}
-#userDetails h5{
-    text-transform: uppercase;
-    text-align: center;
-    padding-top: 5px;
-}
-#userDetails span{
-    border-bottom:2px solid red;
-    padding:2px 4px;
-    margin:3px 0 0 5px;
-    border-radius: 50%;
-    font-weight: bold;
-    cursor: pointer;
-}
-#logout{
-    margin: 15px auto;
-    padding:15px 0;
-    color: red;
-    cursor: pointer;
-    box-shadow: 5px 5px 20px red inset;
-    border-radius: 50%;
-    max-width: 50%;
-}
-#userDetails h, #userDetails p{
-    padding:5px 10px 0 10px;
-}
-#userDetails p{
-    text-align: center;
-}
-.dashboard{
-    height:100vh;
-    width:100%;
-    overflow-y: scroll;
-    display:grid;
-    grid-template-columns: 100px 1fr;
-    grid-template-rows:58px 1fr;
-}
-.dashboard .navbar{
-    /*background:rgba(52, 35, 61, 0.5);*/
-    background:rgba(73, 0, 59,0.6);
-    box-shadow: 5px 5px 15px rgb(7, 1, 14);
-    grid-column: 1/3;
-    display:grid;
-    grid-template-columns: 1fr 120px;
-}
-.dashboard .navbar #user{
-    min-width:100px;
-    height: 100%;
-    grid-column: 2/3;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color:#fff;
-    background:rgb(73, 0, 49);
-    text-transform: capitalize;
-}
-.dashboard .navbar #user img{
-    max-height:35px;
-    margin-top:5px;
-    border-radius: 50%;
-}
-.dashboard .navigation{
-    background: rgba(52, 35, 61, 0.5);
-    border-top:2px solid rgb(7, 1, 14);
-    border-bottom:2px solid rgb(7, 1, 14);
+/* topbar */
+#topBar{
     display: grid;
-    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 100px;
+    background: rgb(1, 14, 14);
+    color:#fff;
 }
-.dashboard .navigation .navItem{
+#topBar .topBarContent{
+    display: flex;
+    align-items: center;
+}
+#topBar .topBarContent p a{
+    font-weight: bold;
+    font-size: larger;
+    text-decoration: none;
+    color: /*rgb(180, 200, 200)*/ #fff;
+}
+#topBar #user{
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom:2px solid rgba(52, 35, 61, 0.4);
-    color:rgb(17, 149, 200);
+    text-transform: capitalize;
+    color: #fff;
+}
+#topBar #user img{
+    height:40px;
+    border-radius: 50%;
+}
+#userDetails{
+    position:absolute;
+    top: 70px;
+    right:0;
+    background:rgb(1, 14, 14);
+    width:200px;
+    padding:20px 0 20px 20px;
+    display:none;
+}
+#userDetails p.email{
+    text-transform: lowercase;
+}
+#userDetails p#logout{
+    padding:10px;
+    color:red;
+    cursor: pointer;
+}
+#closeUserDetails{
+    font-size: x-large;
+    color:red;
     font-weight: bold;
-    background: black;
+    padding:8px;
+    cursor: pointer;
 }
